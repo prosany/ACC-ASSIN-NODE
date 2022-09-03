@@ -13,8 +13,8 @@ const { validSingleUser, validUser } = require("../models/userModel");
 router.get("/random", randomUser);
 router.get("/all", allUsers);
 router.post("/save", validSingleUser, saveUser);
-router.post("/update/:id", validUser, updateUser);
-router.post("/bulk-update", bulkUpdate);
-router.post("/delete/:id", deleteUser);
+router.patch("/update/:id", validUser, updateUser);
+router.patch("/bulk-update", bulkUpdate);
+router.delete("/delete/:id", deleteUser);
 
 module.exports = router;
